@@ -1,0 +1,132 @@
+{
+  "dataset": "gist-960-euclidean",
+  "qdrant": "1.19.1",
+  "k": 10,
+  "hnsw": {
+    "m": 16,
+    "ef_construct": 100
+  },
+  "runs": [
+    {
+      "method": "none",
+      "mode": "none",
+      "ef": 128,
+      "recall_at_10": 0.9362,
+      "laptop_mean_latency_s": 0.008660462300351356,
+      "active_quantization": "None"
+    },
+    {
+      "method": "none",
+      "mode": "none",
+      "ef": 256,
+      "recall_at_10": 0.9691,
+      "laptop_mean_latency_s": 0.010362176499853376,
+      "active_quantization": "None"
+    },
+    {
+      "method": "none",
+      "mode": "none",
+      "ef": 512,
+      "recall_at_10": 0.9834,
+      "laptop_mean_latency_s": 0.012207903299306053,
+      "active_quantization": "None"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "no rescore",
+      "ef": 128,
+      "recall_at_10": 0.8883,
+      "laptop_mean_latency_s": 0.004436595098872204,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "no rescore",
+      "ef": 256,
+      "recall_at_10": 0.914,
+      "laptop_mean_latency_s": 0.005367932801193092,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "no rescore",
+      "ef": 512,
+      "recall_at_10": 0.9254,
+      "laptop_mean_latency_s": 0.007476361300621647,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "rescore",
+      "ef": 128,
+      "recall_at_10": 0.9321,
+      "laptop_mean_latency_s": 0.006801954801776446,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "rescore",
+      "ef": 256,
+      "recall_at_10": 0.9658,
+      "laptop_mean_latency_s": 0.007756964800297282,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "scalar int8",
+      "mode": "rescore",
+      "ef": 512,
+      "recall_at_10": 0.9826,
+      "laptop_mean_latency_s": 0.009418690400430932,
+      "active_quantization": "scalar=ScalarQuantizationConfig(type=<ScalarType.INT8: 'int8'>, quantile=0.9900000095367432, always_ram=None, memory=<Memory.PINNED: 'pinned'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "no rescore",
+      "ef": 128,
+      "recall_at_10": 0.8758,
+      "laptop_mean_latency_s": 0.0018177441005245783,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "no rescore",
+      "ef": 256,
+      "recall_at_10": 0.8995,
+      "laptop_mean_latency_s": 0.0022502286996459587,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "no rescore",
+      "ef": 512,
+      "recall_at_10": 0.9116,
+      "laptop_mean_latency_s": 0.004624112399818842,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "rescore",
+      "ef": 128,
+      "recall_at_10": 0.9271,
+      "laptop_mean_latency_s": 0.003889302700466942,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "rescore",
+      "ef": 256,
+      "recall_at_10": 0.9621,
+      "laptop_mean_latency_s": 0.00327516530000139,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    },
+    {
+      "method": "turboquant 4-bit",
+      "mode": "rescore",
+      "ef": 512,
+      "recall_at_10": 0.9805,
+      "laptop_mean_latency_s": 0.004408838600560557,
+      "active_quantization": "turbo=TurboQuantQuantizationConfig(always_ram=None, memory=<Memory.PINNED: 'pinned'>, bits=<TurboQuantBitSize.BITS4: 'bits4'>)"
+    }
+  ],
+  "exact_control": 1.0
+}
